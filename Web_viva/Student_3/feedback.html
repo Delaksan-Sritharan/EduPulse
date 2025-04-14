@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="css/styles(1).css" />
+    <link rel="stylesheet" href="css/stylesfeedback.css" />
+    <!-- FontAwesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <img class="logo" src="images/logo.png" alt="Your Image" />
+
+      <nav>
+        <ul class="nav__links">
+          <li><a href="../Student_2/tiles2.html">Home</a></li>
+          <li><a href="../Student_2/table.html">Table</a></li>
+          <li><a href="../Student_1/volunteer.html">Volunteers</a></li>
+          <li><a href="../Student_4/profile.html">User profile</a></li>
+          <li><a href="../Student_4/sitemap.html">Site map</a></li>
+          <li><a href="../Student_3/content3.html">Content</a></li>
+          <li><a href="../Student_3/Team.html">Our team</a></li>
+          <li><a href="../Student_3/feedback.html">FeedBack</a></li>
+        </ul>
+      </nav>
+      <!-- Menu button will be added via JavaScript -->
+    </header>
+    <div class="feedback-container">
+      <h1>Feedback Form</h1>
+      <form action="#" method="POST" id="feedback-form">
+        <fieldset>
+          <legend>Personal Details</legend>
+          <label for="full-name">Full Name:</label>
+          <input type="text" id="full-name" name="full-name" required />
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="telephone">Telephone Number:</label>
+          <input type="tel" id="telephone" name="telephone" required />
+
+          <label for="address">Address:</label>
+          <textarea
+            id="address"
+            name="address"
+            rows="4"
+            cols="50"
+            required
+          ></textarea>
+        </fieldset>
+
+        <br />
+
+        <fieldset>
+          <legend>Feedback Details</legend>
+          <label for="comment">Comment or Message:</label>
+          <textarea
+            id="comment"
+            name="comment"
+            maxlength="500"
+            oninput="updateCounter()"
+            required
+          ></textarea>
+          <div id="counter">500 characters remaining</div>
+
+          <label>Rating:</label>
+          <div id="rating">
+            <button type="button" class="emoji" data-rating="1">1️⃣</button>
+            <button type="button" class="emoji" data-rating="2">2️⃣</button>
+            <button type="button" class="emoji" data-rating="3">3️⃣</button>
+            <button type="button" class="emoji" data-rating="4">4️⃣</button>
+            <button type="button" class="emoji" data-rating="5">5️⃣</button>
+          </div>
+
+          <label for="category">Category:</label>
+          <select id="category" name="category">
+            <option value="feedback">Feedback</option>
+            <option value="inquiry">Inquiry</option>
+            <option value="suggestion">Suggestion</option>
+          </select>
+
+          <label for="file">Upload Attachment:</label>
+          <input type="file" id="file" name="file" />
+        </fieldset>
+
+        <fieldset>
+          <button type="submit" id="submit">Submit Feedback</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <script src="js/scriptfeedback.js"></script>
+
+    <footer>
+      <div class="row">
+        <div class="col">
+          <img src="images/logo.png" class="logo1" alt="Edu Pulse Logo" />
+          <p>Quality Education for everyone</p>
+          <p>
+            Empowering communities through accessible learning resources
+            worldwide.
+          </p>
+          <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+        </div>
+
+        <div class="col">
+          <h3>Quick links</h3>
+          <div class="underline"></div>
+          <ul id="ul1">
+            <li><a href="../Student_2/tiles2.html">Home</a></li>
+            <li><a href="../Student_2/table.html">Table</a></li>
+            <li><a href="../Student_1/volunteer.html">Volunteers</a></li>
+            <li><a href="../Student_4/profile.html">User profile</a></li>
+            <li><a href="../Student_4/sitemap.html">Site map</a></li>
+            <li><a href="../Student_3/content3.html">Content</a></li>
+            <li><a href="../Student_3/Team.html">Our team</a></li>
+            <li><a href="../Student_3/feedback.html">FeedBack</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h3>Contact us</h3>
+          <div class="underline"></div>
+          <div>
+            <p>10 | Trelawney Place<br />Colombo 04<br />Sri Lanka</p>
+            <p class="emailid">info@iit.ac.lk</p>
+            <p>+94 76 676 0760</p>
+          </div>
+        </div>
+        <div class="col">
+          <h3>Team members</h3>
+          <div class="underline"></div>
+          <div>
+            <p>Delakshan Sritharan</p>
+            <p>Kithsara Medawewa</p>
+            <p>Sunera Jayasankha</p>
+            <p>Nusry Rahman</p>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright">© 2025 Edu Pluse. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

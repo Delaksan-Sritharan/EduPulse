@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Editor: Web Development Implementation</title>
+    <link rel="stylesheet" href="css/pageEditor_ST1.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Page Editor: Web Development Implementation</h1>
+      </header>
+      <header class="header">
+        <img class="logo" src="pics/logo.png" alt="Your Image" />
+
+        <nav>
+          <ul class="nav__links">
+            <li><a href="../Student_2/tiles2.html">Home</a></li>
+            <li><a href="../Student_2/table.html">Table</a></li>
+            <li><a href="../Student_1/volunteer.html">Volunteers</a></li>
+            <li><a href="../Student_4/profile.html">User profile</a></li>
+            <li><a href="../Student_4/sitemap.html">Site map</a></li>
+            <li><a href="../Student_1/content_ST1.html">Content</a></li>
+            <li><a href="../Student_3/Team.html">Our team</a></li>
+            <li><a href="../Student_3/feedback.html">FeedBack</a></li>
+          </ul>
+        </nav>
+        <!-- Menu button will be added via JavaScript -->
+      </header>
+
+      <div class="table-of-contents">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#content-overview">Content Overview</a></li>
+          <li><a href="#splash-screen">Splash Screen</a></li>
+          <li><a href="#volunteer-page">Volunteer Page</a></li>
+          <li><a href="#content-page">Content Page</a></li>
+          <li><a href="#references">References</a></li>
+        </ul>
+      </div>
+
+      <section id="content-overview">
+        <h2>1. Content Overview</h2>
+        <div class="content-overview">
+          <div class="info-box">
+            <img src="pics/Delaksan.png" />
+            <p><span class="bold">Name:</span> Delaksan Srritharan</p>
+            <p><span class="bold">Role:</span> Student 1</p>
+          </div>
+          <div class="info-box">
+            <p class="bold">Completed Tasks/Pages</p>
+            <ul>
+              <li>Implemented the <span class="bold">Splash Screen</span></li>
+              <li>Implemented the <span class="bold">Volunteer Page</span></li>
+              <li>Implemented the <span class="bold">Content Page</span></li>
+              <li>Implemented the <span class="bold">Editor Page</span></li>
+              <li>Implemented the <span class="bold">Validation Page</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Splash Screen Section -->
+      <section id="splash-screen" class="page-section">
+        <h2 class="page-title">1. Technical Description - Splash Screen</h2>
+        <p>
+          The <span class="bold">Splash Screen</span> provides a smooth
+          transition for users before navigating to the homepage. It displays an
+          introductory message with a loading animation and automatically
+          redirects to the home page after a delay.
+        </p>
+
+        <h3>HTML Implementation</h3>
+        <ul>
+          <li>
+            The splash screen is contained within a
+            <code>&lt;div&gt;</code> element with the <code>id="start"</code>.
+            The content includes a heading (<code>&lt;h2&gt;</code>) displaying
+            a message.
+          </li>
+          <li>
+            The second section (<code>&lt;div id="end"&gt;</code>) appears after
+            the splash screen fades out, showing the website's name and group
+            members.
+          </li>
+          <li>
+            A <code>&lt;script&gt;</code> tag is used to handle the
+            <span class="bold">timed transitions</span> between the splash
+            screen, content, and the homepage.
+          </li>
+        </ul>
+
+        <h3>CSS Implementation</h3>
+        <ul>
+          <li>
+            The <span class="bold">entire screen height</span> (<code
+              >height: 100vh</code
+            >) is utilized to center content vertically.
+          </li>
+          <li>
+            <span class="bold">Text alignment and fonts:</span>
+            <code
+              >text-align: center; font-family: "Times New Roman", Times,
+              serif;</code
+            >
+            ensure readability and consistency.
+          </li>
+          <li>
+            <span class="bold">Loading Animation:</span> Implemented with the
+            <code>.loader</code> class using
+            <code>@keyframes shadowRolling</code> for a dynamic effect.
+          </li>
+          <li>
+            <span class="bold">Fade-in effect:</span> Applied via the
+            <code>@keyframes fadeIn</code> animation to transition text
+            smoothly.
+          </li>
+          <li>
+            <span class="bold">Hidden and visible states:</span>
+            <code>display: none;</code> and <code>display: block;</code> control
+            visibility at different stages.
+          </li>
+        </ul>
+
+        <h3>Organization</h3>
+        <ul>
+          <li>
+            <span class="bold">Section 1:</span> <code>start</code> div -
+            Displays initial message and loader animation.
+          </li>
+          <li>
+            <span class="bold">Section 2:</span> <code>end</code> div - Shows
+            the website title and team members before redirecting.
+          </li>
+          <li>
+            <span class="bold">JavaScript:</span> Handles timing and
+            redirections.
+          </li>
+        </ul>
+
+        <div class="links">
+          <h3>Links</h3>
+          <p>
+            <a href="un_splash.html" target="_blank">Splash Screen Page</a>
+          </p>
+        </div>
+
+        <div class="challenges">
+          <h3>Challenges and Lessons Learned</h3>
+          <h4>Challenges</h4>
+          <ul>
+            <li>
+              Ensuring the smooth transition between sections without
+              flickering.
+            </li>
+            <li>Adjusting animation timing for a seamless experience.</li>
+          </ul>
+          <h4>Lessons Learned</h4>
+          <ul>
+            <li>
+              Using <code>setTimeout()</code> in JavaScript effectively for UI
+              transitions.
+            </li>
+            <li>Optimizing animations for responsiveness.</li>
+          </ul>
+        </div>
+
+        <h3>Accessibility</h3>
+        <ul>
+          <li>
+            <span class="bold">Text Contrast:</span> Used black text on a white
+            background for readability.
+          </li>
+          <li>
+            <span class="bold">Semantic HTML:</span> Proper use of
+            <code>&lt;h2&gt;</code> and <code>&lt;div&gt;</code> elements for
+            structure.
+          </li>
+          <li>
+            <span class="bold">Minimal motion impact:</span> Limited animation
+            to avoid motion sickness concerns.
+          </li>
+        </ul>
+
+        <h3>Compliance</h3>
+        <p>
+          <span class="bold">Janet Web Regulations:</span> Ensured adherence by
+          using <span class="bold">simple, accessible HTML</span> and
+          <span class="bold">valid CSS properties</span>.
+        </p>
+      </section>
+
+      <!-- Volunteer Page Section -->
+      <section id="volunteer-page" class="page-section">
+        <h2 class="page-title">2. Technical Description - Volunteer Page</h2>
+
+        <h3>HTML Techniques Used</h3>
+        <ul>
+          <li>
+            Used <code>&lt;div&gt;</code> elements to create a structured layout
+            for different sections.
+          </li>
+          <li>
+            Implemented <code>&lt;nav&gt;</code> for site navigation, ensuring
+            accessibility and usability.
+          </li>
+          <li>
+            Used <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> for the
+            navigation bar to maintain semantic structure.
+          </li>
+          <li>
+            Included <code>&lt;button&gt;</code> elements for user interactions
+            like applying for volunteer opportunities.
+          </li>
+          <li>
+            Used <code>&lt;h2&gt;</code> and <code>&lt;p&gt;</code> for
+            structured content display, improving readability.
+          </li>
+        </ul>
+
+        <h3>CSS Techniques Used</h3>
+        <ul>
+          <li>
+            Applied <code>flexbox</code> for responsive design and alignment.
+          </li>
+          <li>
+            Used <code>background-image</code> with
+            <code>background-size: cover</code> to create visually appealing
+            hero sections.
+          </li>
+          <li>
+            Implemented <code>@media</code> queries to ensure the page is
+            mobile-friendly.
+          </li>
+          <li>
+            Styled buttons with hover effects using <code>transition</code> and
+            <code>box-shadow</code> to enhance user interaction.
+          </li>
+        </ul>
+
+        <h3>Organization</h3>
+        <ul>
+          <li>
+            The page follows a clear hierarchical structure with headers,
+            sections, and a well-defined navigation menu.
+          </li>
+          <li>
+            The content is divided into logical sections, making it easy to read
+            and navigate.
+          </li>
+        </ul>
+
+        <div class="links">
+          <h3>Links</h3>
+          <p>
+            <a href="vol_un.html" target="_blank">Volunteer Page</a>
+          </p>
+        </div>
+
+        <div class="challenges">
+          <h3>Challenges and Lessons Learned</h3>
+          <h4>Challenges</h4>
+          <ul>
+            <li>Ensuring consistent styling across different screen sizes.</li>
+            <li>Handling overlapping elements in smaller viewports.</li>
+          </ul>
+          <h4>Lessons Learned</h4>
+          <ul>
+            <li>
+              Improved understanding of flexbox and responsive design
+              principles.
+            </li>
+            <li>Learned the importance of accessibility in web development.</li>
+          </ul>
+        </div>
+
+        <h3>Accessibility</h3>
+        <ul>
+          <li>
+            Used semantic HTML elements (<code>&lt;header&gt;</code>,
+            <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+            <code>&lt;footer&gt;</code>) for screen reader compatibility.
+          </li>
+          <li>
+            Ensured text contrast for readability and colorblind accessibility.
+          </li>
+          <li>
+            Used <code>alt</code> attributes for images to enhance
+            accessibility.
+          </li>
+        </ul>
+
+        <h3>Compliance</h3>
+        <ul>
+          <li>
+            Adhered to HTML and CSS best practices for maintainability and
+            readability.
+          </li>
+          <li>
+            Ensured compliance with standard web accessibility guidelines (WCAG
+            2.1).
+          </li>
+          <li>Followed Janet regulations governing web page publication.</li>
+        </ul>
+      </section>
+
+      <!-- Content Page Section -->
+      <section id="content-page" class="page-section">
+        <h2 class="page-title">3. Technical Description - Content Page</h2>
+
+        <h3>HTML Techniques Used</h3>
+        <ul>
+          <li>
+            Used <code>&lt;section&gt;</code> elements for organizing content.
+          </li>
+          <li>Implemented <code>&lt;aside&gt;</code> for side navigation.</li>
+          <li>Used <code>&lt;main&gt;</code> for central content.</li>
+          <li>
+            Included <code>&lt;img&gt;</code> with <code>alt</code> attributes
+            for accessibility.
+          </li>
+          <li>
+            Used <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code> for content
+            hierarchy.
+          </li>
+        </ul>
+
+        <h3>CSS Techniques Used</h3>
+        <ul>
+          <li>
+            Applied <code>grid</code> and <code>flexbox</code> for layout
+            structure.
+          </li>
+          <li>
+            Used <code>background: linear-gradient(...)</code> for visual
+            appeal.
+          </li>
+          <li>Implemented <code>box-shadow</code> for depth effects.</li>
+          <li>Applied <code>sticky</code> positioning for side navigation.</li>
+        </ul>
+
+        <h3>Organization</h3>
+        <ul>
+          <li>The pages have a structured layout with clear sections.</li>
+          <li>Logical navigation ensures smooth user experience.</li>
+        </ul>
+
+        <div class="links">
+          <h3>Links</h3>
+          <p>
+            <a href="content.html" target="_blank">Content Page</a>
+          </p>
+        </div>
+
+        <div class="challenges">
+          <h3>Challenges and Lessons Learned</h3>
+          <h4>Challenges</h4>
+          <ul>
+            <li>Ensuring layout consistency across screen sizes.</li>
+            <li>Managing overlapping elements in different resolutions.</li>
+          </ul>
+          <h4>Lessons Learned</h4>
+          <ul>
+            <li>
+              Improved skills in <code>flexbox</code> and <code>grid</code>.
+            </li>
+            <li>Learned the importance of user-friendly navigation.</li>
+          </ul>
+        </div>
+
+        <h3>Accessibility</h3>
+        <ul>
+          <li>Used semantic HTML for better readability.</li>
+          <li>Ensured color contrast for readability.</li>
+          <li>Added <code>alt</code> attributes for images.</li>
+        </ul>
+
+        <h3>Compliance</h3>
+        <ul>
+          <li>Adhered to HTML and CSS best practices.</li>
+          <li>Followed web accessibility guidelines (WCAG 2.1).</li>
+          <li>Ensured compliance with Janet regulations.</li>
+        </ul>
+      </section>
+
+      <!-- Volunteer Page Section -->
+      <section id="volunteer-page" class="page-section">
+        <h2 class="page-title">4. Technical Description - Validation Page</h2>
+
+        <h3>HTML Techniques Used</h3>
+        <ul>
+          <li>
+            Used <code>&lt;div&gt;</code> elements to create a structured layout
+            for different sections.
+          </li>
+          <li>
+            Implemented <code>&lt;nav&gt;</code> for site navigation, ensuring
+            accessibility and usability.
+          </li>
+          <li>
+            Used <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> for the
+            navigation bar to maintain semantic structure.
+          </li>
+          <li>
+            Included <code>&lt;button&gt;</code> elements for user interactions
+            like applying for volunteer opportunities.
+          </li>
+          <li>
+            Used <code>&lt;h2&gt;</code> and <code>&lt;p&gt;</code> for
+            structured content display, improving readability.
+          </li>
+        </ul>
+
+        <h3>CSS Techniques Used</h3>
+        <ul>
+          <li>
+            Applied <code>flexbox</code> for responsive design and alignment.
+          </li>
+          <li>
+            Used <code>background-image</code> with
+            <code>background-size: cover</code> to create visually appealing
+            hero sections.
+          </li>
+          <li>
+            Implemented <code>@media</code> queries to ensure the page is
+            mobile-friendly.
+          </li>
+          <li>
+            Styled buttons with hover effects using <code>transition</code> and
+            <code>box-shadow</code> to enhance user interaction.
+          </li>
+        </ul>
+
+        <h3>Organization</h3>
+        <ul>
+          <li>
+            The page follows a clear hierarchical structure with headers,
+            sections, and a well-defined navigation menu.
+          </li>
+          <li>
+            The content is divided into logical sections, making it easy to read
+            and navigate.
+          </li>
+        </ul>
+
+        <div class="links">
+          <h3>Links</h3>
+          <p>
+            <a href="vol_un.html" target="_blank">Volunteer Page</a>
+          </p>
+        </div>
+
+        <div class="challenges">
+          <h3>Challenges and Lessons Learned</h3>
+          <h4>Challenges</h4>
+          <ul>
+            <li>Ensuring consistent styling across different screen sizes.</li>
+            <li>Handling overlapping elements in smaller viewports.</li>
+          </ul>
+          <h4>Lessons Learned</h4>
+          <ul>
+            <li>
+              Improved understanding of flexbox and responsive design
+              principles.
+            </li>
+            <li>Learned the importance of accessibility in web development.</li>
+          </ul>
+        </div>
+
+        <h3>Accessibility</h3>
+        <ul>
+          <li>
+            Used semantic HTML elements (<code>&lt;header&gt;</code>,
+            <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+            <code>&lt;footer&gt;</code>) for screen reader compatibility.
+          </li>
+          <li>
+            Ensured text contrast for readability and colorblind accessibility.
+          </li>
+          <li>
+            Used <code>alt</code> attributes for images to enhance
+            accessibility.
+          </li>
+        </ul>
+
+        <h3>Compliance</h3>
+        <ul>
+          <li>
+            Adhered to HTML and CSS best practices for maintainability and
+            readability.
+          </li>
+          <li>
+            Ensured compliance with standard web accessibility guidelines (WCAG
+            2.1).
+          </li>
+          <li>Followed Janet regulations governing web page publication.</li>
+        </ul>
+      </section>
+
+      <section id="references" class="references">
+        <h2>8. References</h2>
+        <ul>
+          <li>
+            W3Schools CSS Animations:
+            <a
+              href="https://www.w3schools.com/css/css3_animations.asp"
+              target="_blank"
+              >https://www.w3schools.com/css/css3_animations.asp</a
+            >
+          </li>
+          <li>
+            MDN Web Docs - JavaScript Timers:
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout"
+              target="_blank"
+              >https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout</a
+            >
+          </li>
+          <li>
+            W3C Accessibility Guidelines:
+            <a
+              href="https://www.w3.org/WAI/standards-guidelines/wcag/"
+              target="_blank"
+              >https://www.w3.org/WAI/standards-guidelines/wcag/</a
+            >
+          </li>
+          <li>
+            MDN Web Docs - HTML & CSS:
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+              target="_blank"
+              >https://developer.mozilla.org/en-US/docs/Web/HTML</a
+            >
+          </li>
+          <li>
+            MDN Web Docs - CSS Grid Layout:
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout"
+              target="_blank"
+              >https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout</a
+            >
+          </li>
+          <li>
+            MDN Web Docs - CSS Flexbox:
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout"
+              target="_blank"
+              >https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <a href="#" class="back-to-top">↑</a>
+    </div>
+    <footer>
+      <div class="row">
+        <div class="col">
+          <img src="pics/logo.png" class="logo1" alt="Edu Pulse Logo" />
+          <p>Quality Education for everyone</p>
+          <p>
+            Empowering communities through accessible learning resources
+            worldwide.
+          </p>
+          <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+        </div>
+
+        <div class="col">
+          <h3>
+            Quick links
+            <div class="underline"></div>
+          </h3>
+          <ul id="ul1">
+            <li><a href="../Student_2/tiles2.html">Home</a></li>
+            <li><a href="../Student_2/table.html">Table</a></li>
+            <li><a href="../Student_1/volunteer.html">Volunteers</a></li>
+            <li><a href="../Student_4/profile.html">User profile</a></li>
+            <li><a href="../Student_4/sitemap.html">Site map</a></li>
+            <li><a href="../Student_1/content_ST1.html">Content</a></li>
+            <li><a href="../Student_3/Team.html">Our team</a></li>
+            <li><a href="../Student_3/feedback.html">FeedBack</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h3>
+            Contact us
+            <div class="underline"></div>
+          </h3>
+          <div>
+            <p>10 | Trelawney Place<br />Colombo 04<br />Sri Lanka</p>
+            <p class="emailid">info@iit.ac.lk</p>
+            <p>+94 76 676 0760</p>
+          </div>
+        </div>
+        <div class="col">
+          <h3>
+            Team members
+            <div class="underline"></div>
+          </h3>
+          <div>
+            <p>Delakshan Sritharan</p>
+            <p>Kithsara Medawewa</p>
+            <p>Sunera Jayasankha</p>
+            <p>Nusry Rahman</p>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright">© 2025 Edu Pluse. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      // Back to top button functionality
+      document
+        .querySelector(".back-to-top")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+    </script>
+  </body>
+</html>

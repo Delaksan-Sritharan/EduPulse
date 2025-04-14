@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Splash Screen</title>
+    <link rel="stylesheet" href="css/splash.css" />
+  </head>
+  <body>
+    <div id="start" class="start">
+      <img src="pics/EduPulse.jpeg" alt="EduPulse Logo" class="logo" />
+      <h2>Education: The foundation for a better world.</h2>
+      <span class="loader"></span>
+    </div>
+    <div id="end" class="end">
+      <div><h1>EduPulse Website</h1></div>
+      <div>
+        <h2>
+          We have come together to build, unite, and educate. As university
+          students, we created this website
+        </h2>
+      </div>
+      <div><h2>Group members</h2></div>
+      <div>
+        <ol>
+          <li>S. Delaksan w2120777</li>
+          <li>W.A.S.J. Wickramanayaka w2119871</li>
+          <li>K. G. B. Medawewa w2119877</li>
+          <li>W. A. N. Rahman w2121213</li>
+        </ol>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("end").style.display = "none";
+        setTimeout(function () {
+          document.getElementById("start").style.display = "none";
+          document.getElementById("end").style.display = "block";
+          setTimeout(function () {
+            document.getElementById("end").style.display = "none";
+            window.location.href = "../Student_2/tiles2.html";
+          }, 2000);
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>

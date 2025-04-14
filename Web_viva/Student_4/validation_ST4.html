@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn UN Website - HTML Validation Report</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      header {
+        background-color: #0072b1;
+        color: white;
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 30px;
+      }
+      h1 {
+        margin: 0;
+      }
+      .summary {
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        border-left: 5px solid #0072b1;
+      }
+      .error-count {
+        font-weight: bold;
+        color: #d9534f;
+      }
+      .warning-count {
+        font-weight: bold;
+        color: #f0ad4e;
+      }
+      .success {
+        color: #5cb85c;
+        font-weight: bold;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 30px;
+      }
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      tr:hover {
+        background-color: #f5f5f5;
+      }
+      .error {
+        background-color: rgba(217, 83, 79, 0.1);
+      }
+      .warning {
+        background-color: rgba(240, 173, 78, 0.1);
+      }
+      .info {
+        background-color: rgba(91, 192, 222, 0.1);
+      }
+      .tag {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: 3px;
+        font-size: 14px;
+        font-weight: bold;
+        margin-right: 5px;
+      }
+      .tag-error {
+        background-color: #d9534f;
+        color: white;
+      }
+      .tag-warning {
+        background-color: #f0ad4e;
+        color: white;
+      }
+      .tag-info {
+        background-color: #5bc0de;
+        color: white;
+      }
+      code {
+        font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+        background-color: #f7f7f7;
+        padding: 2px 4px;
+        border-radius: 3px;
+        font-size: 14px;
+        color: #c7254e;
+      }
+      .code-block {
+        background-color: #f7f7f7;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+        font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+        margin: 15px 0;
+        border-left: 3px solid #ddd;
+      }
+      .fixed {
+        background-color: #dff0d8;
+        border-left: 3px solid #5cb85c;
+      }
+      .incorrect {
+        text-decoration: line-through;
+        color: #d9534f;
+      }
+      .correct {
+        color: #5cb85c;
+      }
+      .recommendations {
+        background-color: #e8f4f8;
+        padding: 20px;
+        border-radius: 5px;
+        margin-top: 30px;
+        border-left: 5px solid #5bc0de;
+      }
+      .file-info {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 5px;
+      }
+      .actions {
+        margin-top: 20px;
+      }
+      .btn {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #0072b1;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+      .btn:hover {
+        background-color: #005682;
+      }
+      .pagination {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+      .pagination li {
+        margin-right: 5px;
+      }
+      .pagination a {
+        display: block;
+        padding: 8px 12px;
+        background-color: #f5f5f5;
+        color: #333;
+        text-decoration: none;
+        border-radius: 3px;
+      }
+      .pagination a.active {
+        background-color: #0072b1;
+        color: white;
+      }
+      .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        margin-bottom: 20px;
+        border-radius: 5px 5px 0 0;
+      }
+      .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 16px;
+      }
+      .tab button:hover {
+        background-color: #ddd;
+      }
+      .tab button.active {
+        background-color: #0072b1;
+        color: white;
+      }
+      .tabcontent {
+        display: none;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+      }
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Learn UN Website - HTML Validation Report</h1>
+      <p>Validation results and recommendations for improving HTML quality</p>
+    </header>
+
+    <div class="summary">
+      <h2>Validation Summary</h2>
+      <p>
+        The validation process found <span class="error-count">1</span> error
+        and <span class="warning-count">7</span> warnings in the Learn UN
+        website HTML.
+      </p>
+      <p>
+        The most common issue is:
+        <strong>Trailing slash on void elements</strong>, which appears multiple
+        times across different pages.
+      </p>
+    </div>
+
+    <div class="tab">
+      <button class="tablinks active" onclick="openTab(event, 'Issues')">
+        Issues
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Fixes')">
+        Recommended Fixes
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Best')">
+        Best Practices
+      </button>
+    </div>
+
+    <div id="Issues" class="tabcontent show">
+      <h2>Detected Issues</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Location</th>
+            <th>Impact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td><span class="tag tag-info">Info</span></td>
+            <td>Trailing slash on void elements</td>
+            <td>Multiple locations</td>
+            <td>Low - HTML5 compatibility issue</td>
+          </tr>
+          <tr class="error">
+            <td><span class="tag tag-error">Error</span></td>
+            <td>Stray end tag &lt;a&gt;</td>
+            <td>Line 46, column 25</td>
+            <td>High - Causes parsing errors</td>
+          </tr>
+          <tr class="info">
+            <td><span class="tag tag-info">Info</span></td>
+            <td>Missing alt text for image</td>
+            <td>Line 20, column 9</td>
+            <td>Medium - Accessibility concern</td>
+          </tr>
+          <tr class="info">
+            <td><span class="tag tag-info">Info</span></td>
+            <td>External stylesheet with trailing slash</td>
+            <td>Line 15, column 5</td>
+            <td>Low - HTML5 compatibility issue</td>
+          </tr>
+          <tr class="info">
+            <td><span class="tag tag-info">Info</span></td>
+            <td>Meta tag with trailing slash</td>
+            <td>Line 5, column 5</td>
+            <td>Low - HTML5 compatibility issue</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Error Details</h3>
+
+      <div class="code-block">
+        <div class="file-info">File: index.html, Line 46, Column 25</div>
+        <pre><code>&lt;<span class="incorrect">/a&gt;</span></code></pre>
+        <p>This is a stray end tag with no matching opening tag.</p>
+      </div>
+
+      <div class="code-block">
+        <div class="file-info">File: index.html, Line 5, Column 5</div>
+        <pre><code>&lt;meta charset="UTF-8"<span class="incorrect"> /</span>&gt;</code></pre>
+        <p>
+          Void elements like meta should not have trailing slashes in HTML5.
+        </p>
+      </div>
+
+      <div class="code-block">
+        <div class="file-info">File: index.html, Line 6, Column 5</div>
+        <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"<span class="incorrect"> /</span>&gt;</code></pre>
+        <p>
+          Void elements like meta should not have trailing slashes in HTML5.
+        </p>
+      </div>
+
+      <div class="code-block">
+        <div class="file-info">File: index.html, Line 9, Column 5</div>
+        <pre><code>&lt;link rel="stylesheet" href="styles.css"<span class="incorrect"> /</span>&gt;</code></pre>
+        <p>
+          Void elements like link should not have trailing slashes in HTML5.
+        </p>
+      </div>
+
+      <div class="code-block">
+        <div class="file-info">File: index.html, Line 20, Column 9</div>
+        <pre><code>&lt;img class="logo" src="images/logo.png" alt="Learn UN Logo"<span class="incorrect"> /</span>&gt;</code></pre>
+        <p>Void elements like img should not have trailing slashes in HTML5.</p>
+      </div>
+    </div>
+
+    <div id="Fixes" class="tabcontent">
+      <h2>Recommended Fixes</h2>
+
+      <h3>1. Remove trailing slashes from void elements</h3>
+      <p>
+        In HTML5, void elements (such as meta, link, img, input, br, hr) should
+        not have trailing slashes.
+      </p>
+
+      <div class="code-block">
+        <p>Incorrect:</p>
+        <pre><code>&lt;meta charset="UTF-8" <span class="incorrect">/</span>&gt;
+&lt;link rel="stylesheet" href="styles.css" <span class="incorrect">/</span>&gt;
+&lt;img src="images/logo.png" alt="Learn UN Logo" <span class="incorrect">/</span>&gt;</code></pre>
+      </div>
+
+      <div class="code-block fixed">
+        <p>Correct:</p>
+        <pre><code>&lt;meta charset="UTF-8"&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;img src="images/logo.png" alt="Learn UN Logo"&gt;</code></pre>
+      </div>
+
+      <h3>2. Remove stray end tag</h3>
+      <p>
+        Remove the stray &lt;/a&gt; tag at line 46, column 25 or ensure it has a
+        matching opening tag.
+      </p>
+
+      <div class="code-block">
+        <p>Incorrect:</p>
+        <pre><code>... some content ...
+<span class="incorrect">&lt;/a&gt;</span>
+... more content ...</code></pre>
+      </div>
+
+      <div class="code-block fixed">
+        <p>Correct (remove if it's a stray tag):</p>
+        <pre><code>... some content ...
+... more content ...</code></pre>
+      </div>
+
+      <h3>3. Add missing alt attributes to images</h3>
+      <p>Ensure all images have descriptive alt text for accessibility.</p>
+
+      <div class="code-block">
+        <p>Incorrect:</p>
+        <pre><code>&lt;img src="images/header.jpg"&gt;</code></pre>
+      </div>
+
+      <div class="code-block fixed">
+        <p>Correct:</p>
+        <pre><code>&lt;img src="images/header.jpg" alt="Educational resources for sustainable development"&gt;</code></pre>
+      </div>
+    </div>
+
+    <div id="Best" class="tabcontent">
+      <h2>HTML Best Practices</h2>
+
+      <h3>HTML5 Doctype</h3>
+      <p>
+        Always include the HTML5 doctype at the beginning of your HTML
+        documents:
+      </p>
+      <div class="code-block">
+        <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+      </div>
+
+      <h3>Character Encoding</h3>
+      <p>Always specify the character encoding in the head section:</p>
+      <div class="code-block">
+        <pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+      </div>
+
+      <h3>Viewport Meta Tag</h3>
+      <p>Include the viewport meta tag for responsive design:</p>
+      <div class="code-block">
+        <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+      </div>
+
+      <h3>Semantic HTML</h3>
+      <p>Use semantic HTML elements to improve accessibility and SEO:</p>
+      <div class="code-block">
+        <pre><code>&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;footer&gt;</code></pre>
+      </div>
+
+      <h3>Void Elements in HTML5</h3>
+      <p>In HTML5, void elements should not have trailing slashes:</p>
+      <div class="code-block">
+        <pre><code>&lt;br&gt;, &lt;hr&gt;, &lt;img&gt;, &lt;input&gt;, &lt;link&gt;, &lt;meta&gt;</code></pre>
+      </div>
+
+      <h3>Accessibility</h3>
+      <p>Ensure your site is accessible by:</p>
+      <ul>
+        <li>Using appropriate heading hierarchy (h1-h6)</li>
+        <li>Adding alt text to images</li>
+        <li>Using ARIA attributes when necessary</li>
+        <li>Ensuring sufficient color contrast</li>
+        <li>Making your site keyboard navigable</li>
+      </ul>
+    </div>
+
+    <div class="recommendations">
+      <h2>Additional Recommendations</h2>
+      <p>
+        Based on the validation results, here are some additional
+        recommendations to improve your website:
+      </p>
+      <ol>
+        <li>
+          <strong>Update to HTML5 standards:</strong> Remove all trailing
+          slashes from void elements consistently across all pages.
+        </li>
+        <li>
+          <strong>Fix the stray end tag:</strong> Identify and remove the stray
+          &lt;/a&gt; tag or ensure it has a proper opening tag.
+        </li>
+        <li>
+          <strong>Improve accessibility:</strong> Ensure all images have
+          appropriate alt text and use semantic HTML structure.
+        </li>
+        <li>
+          <strong>Regular validation:</strong> Make validation a part of your
+          regular development workflow to catch issues early.
+        </li>
+        <li>
+          <strong>Consider automated tooling:</strong> Implement linting tools
+          in your development process to catch HTML errors automatically.
+        </li>
+      </ol>
+    </div>
+
+    <div class="actions">
+      <a href="#" class="btn">Download Full Report</a>
+      <a href="#" class="btn">Re-validate Website</a>
+    </div>
+
+    <script>
+      function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </body>
+</html>

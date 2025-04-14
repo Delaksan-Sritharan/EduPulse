@@ -1,0 +1,88 @@
+/* Fixed version of tiles.css */
+
+.tile-container {
+    width: 80%;               /* Increased width for better visibility */
+    margin: 120px auto 60px;  /* Top margin to account for fixed header */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    position: relative;       /* Ensure proper stacking context */
+    z-index: 1;               /* Lower than header but visible */
+}
+
+.tile {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;      /* Added rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Default shadow */
+    /* Placeholder background for testing */
+    background-color: #f0f0f0;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px 5px rgba(0, 0, 255, 0.5);
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 141, 181, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    padding: 15px;
+    color: white;  /* Make text visible on blue background */
+    text-align: center;
+}
+
+.tile:hover .popup {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup p {
+    padding: 10px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.popup button {
+    padding: 8px 15px;
+    background-color: #ffffff;
+    color: #065877;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.popup button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .tile-container {
+        width: 90%;
+        grid-template-columns: 1fr;  /* Single column on mobile */
+        margin-top: 100px;  /* Reduced top margin on mobile */
+    }
+}

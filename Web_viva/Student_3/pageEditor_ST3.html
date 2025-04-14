@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editor-3</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="css/styles(1).css" />
+    <link rel="stylesheet" href="css/pageEditor_validator.css">
+    <!-- FontAwesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <img class="logo" src="images/logo.png" alt="Your Image" >
+
+      <nav>
+        <ul class="nav__links">
+          <li><a href="../Student_2/tiles2.html">Home</a></li>
+          <li><a href="../Student_2/table.html">Table</a></li>
+          <li><a href="../Student_1/volunteer.html">Volunteers</a></li>
+          <li><a href="../Student_4/profile.html">User profile</a></li>
+          <li><a href="../Student_4/sitemap.html">Site map</a></li>
+          <li><a href="../Student_3/content3.html">Content</a></li>
+          <li><a href="../Student_3/Team.html">Our team</a></li>
+          <li><a href="../Student_3/feedback.html">FeedBack</a></li>
+        </ul>
+      </nav>
+      <!-- Menu button will be added via JavaScript -->
+    </header>
+
+    <br></br>
+    <br></br>
+    
+
+  
+
+    <div class="container">
+        <!-- Main content area -->
+        <main>
+
+
+            <section class="stud">
+                <h2>Sunera Wickramanayaka - Student 3</h2>
+            </section>
+
+            <!-- Update those first three sections for the pages you were responsible to implement -->
+
+            <section>
+                <h2 id="Feedback page">Feedback Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>The HTML and CSS used in this page implement a responsive feedback form with a focus on functionality and visual appeal. The header tag includes a navigation menu with links to different sections of the site, offering users easy access to various pages. The form element is used to collect user input, with specific form controls such as input, textarea, and select to capture personal details and feedback. Labels are associated with each input field using the "for" attribute to improve accessibility. The CSS styling defines the page’s aesthetic by applying a fixed background image and text color adjustments, such as white text on a dark background for contrast. The @keyframes rule adds an animation effect to the background image, making it expand and contract, creating a dynamic feel. The form container is styled with padding and a border radius to provide a clean and modern look. Responsiveness is achieved through media queries, which adjust the layout for different screen sizes, ensuring the design remains user-friendly on mobile devices. Button hover effects and form validation states (using valid and invalid) enhance the user experience by providing visual feedback. Overall, the combination of these HTML tags and CSS properties ensures a well-structured, accessible, and visually appealing feedback form with functional animations and responsive design.</p> 
+                    
+                    <h3>Accessibility</h3>
+                        <p>In this page, accessibility was addressed in several ways to ensure that all users, including those with disabilities, can interact with the feedback form effectively. First, the `label` elements are properly associated with their respective form controls using the "for" attribute, which links the labels to the corresponding input fields. This helps screen readers understand the purpose of each form field. Additionally, the use of `fieldset` and `legend` tags groups related form elements, providing a logical structure that can be better understood by assistive technologies. The visual contrast between the white text on a dark background ensures readability for users with visual impairments, while the font size and layout adjustments through CSS, especially in media queries, make the content more legible on smaller screens. For form validation, the `:valid` and `:invalid` pseudo-classes are used to visually indicate the status of user input, which is helpful for users relying on keyboard navigation or screen readers. Finally, interactive elements like buttons and inputs are styled to provide clear feedback, such as hover effects on buttons, ensuring that users can visually identify active elements and interact with them confidently. These combined techniques contribute to a more accessible and user-friendly experience for all users.</p>
+                    
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST3.html">Validation page</Link></a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                    <h3>Link to the page</h3>
+                        <p><a href="feedback.html">Feedback Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="Team-Page">Team Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>This page uses a combination of HTML and CSS to create a visually appealing, responsive, and interactive layout for a team profile page. The HTML structure includes semantic tags like header, footer, and main to define the page sections clearly. The header contains a navigation bar and logo, while the footer has quick links and contact information, improving the overall organization. Inside the main element, a team-container flexbox is used to display individual team members, allowing the profile cards to adjust and wrap based on screen size. Each team member is represented by a div with class team-member, and their details, such as their photo and contributions, are organized inside nested div elements. The use of tabindex="0" ensures that the profile cards are keyboard navigable, improving accessibility. CSS styling uses modern techniques like flexbox for layout, media queries for responsiveness, and hover effects for interactivity, such as enlarging profile cards and adding glowing effects on hover. Transitions are used for smooth visual changes, enhancing user experience.</p> 
+
+                    <h3>Accessibility</h3>
+                        <p>To enhance accessibility, several key strategies are employed. Each team member's div element includes a tabindex="0", ensuring that users can navigate through the profiles using the keyboard. Images include alt text that describes each person's photo, which is essential for users with visual impairments using screen readers. The alt attributes for the LinkedIn icons also provide context for those who cannot see the images. To make sure users with different screen sizes can view the content effectively, media queries are used to adjust the layout based on the screen width, providing a user-friendly experience on mobile devices. The use of a tags with clear href values for links to the LinkedIn profiles ensures that users can easily navigate to additional resources. Overall, the page is designed to be navigable by both mouse and keyboard users, while also accommodating users who may rely on assistive technologies.                        </p>
+
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST3.html#Team-Profile">validation page</a></p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="team.html">Team page</a></p>
+            </section>
+
+            <section>
+                <h2 id="content">Content Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>The HTML structure of this page is organized to ensure semantic clarity and accessibility. The header includes an image for branding and a navigation bar with links, providing easy access to key sections of the site. The main tag encapsulates the primary content, which is divided into sections using section tags for clear content segmentation. Each section contains headers (h2) and paragraphs (p) that make the content scannable and user-friendly. The footer follows the header structure, offering quick links and contact information, enhancing the site's functionality. The class and id attributes in HTML ensure that the styling and JavaScript can target specific elements efficiently. In the CSS, the use of margin, padding, and box-sizing helps ensure a consistent layout across devices, preventing content from overflowing or being misaligned. The background image property for the body creates a visually appealing design that doesn’t overpower the text, while the max-width, margin, and padding on the container ensure the content stays centered and properly spaced. Additionally, typography properties such as font-family, line-height, and font-size improve readability, while the box-shadow and border-radius on containers and images give a modern, polished look. The navigation links are styled to stand out but maintain simplicity, supporting a smooth user experience. These choices in both HTML structure and CSS styling aim to create a user-friendly, aesthetically pleasing, and functional website.</p> 
+
+                    <h3>Accessibility</h3>
+                        <p>The HTML and CSS implementation of this page also incorporates several accessibility considerations to ensure it is usable by a wide range of users. The use of semantic HTML tags like header, nav, main, section, and footer provides a clear structure, making it easier for screen readers to navigate and understand the page's content. The alt attribute on images ensures that users who rely on screen readers can access meaningful descriptions of visual elements, such as the logo. The navigation bar is logically organized with ul and li elements, and using anchor tags for navigation ensures that keyboard users and assistive technologies can interact with the links. Additionally, the color contrast between the text and background ensures readability for users with visual impairments. In the CSS, box-sizing: border-box ensures that padding and borders do not affect the overall layout, preventing any unexpected visual shifts, which can be problematic for users with cognitive disabilities. By prioritizing these HTML and CSS techniques, the page is designed to be more inclusive, making the content accessible to people with a variety of needs and preferences.</p>
+
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST3.html#contentVal">validation page</a></p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="content3.html">Content Page.</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge"> Challenges and Lessons Learned</h2>
+                    <p>Creating a Feedback Page and a Team Profile Page presented challenges such as maintaining design consistency, ensuring user-friendly interactions, handling form validation, and optimizing performance. Managing responsiveness across devices and integrating data dynamically were also key concerns. Through this process, I learned the importance of keeping interfaces simple, validating inputs on both client and server sides, and optimizing images for faster loading. Additionally, testing across multiple devices helped refine the user experience, ensuring both pages were visually appealing and functionally efficient.</p> 
+            </section>
+
+            <section>
+                <h2 id="compliance"> Compliance</h2>
+                    <p>The HTML and CSS implementation of this page also ensures compliance with web standards and best practices. The use of valid and semantic HTML tags like header, nav, main, section, and footer follows established guidelines for structuring content. This helps with search engine optimization (SEO) and guarantees that the content is correctly interpreted by both browsers and assistive technologies. Proper linking of external resources, such as CSS and FontAwesome for icons, ensures that the page loads efficiently while maintaining its design and functionality. The `meta` tags, including charset and viewport, ensure compatibility across different devices and browsers by defining the character encoding and responsive behavior. In the CSS, properties like box-sizing: border-box ensure consistent layout behavior, while margin and padding settings help in creating a clean, visually appealing structure. By adhering to these principles, the page meets compliance standards, ensuring it functions correctly across a wide range of devices and platforms.</p> 
+
+                    
+            </section>
+
+            <section>
+                <h2 id="ref">References</h2>
+                <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
+                    <ul class="ref">
+                        <li>"A Complete Guide to Flexbox" by CSS-Tricks Available at: <a href="#">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a> </li>
+                        
+                    </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside>
+            <h3>Core pages developed:</h3>
+
+        <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+            <ul class="top-level-ul">
+                <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
+                
+                <li>Student 3</li>
+                    <ul>
+                        <li><a href="feedback.html">Feedback page</a> </li>
+                        <li><a href="Team.html">Team page</a></li>
+                        <li><a href="content3.css">Content page</a></li>
+                    </ul>
+                
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="row">
+          <div class="col">
+            <img src="images/logo.png" class="logo1" alt="Edu Pulse Logo" />
+            <p>Quality Education for everyone</p>
+            <p>
+              Empowering communities through accessible learning resources
+              worldwide.
+            </p>
+            <div class="social-icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-linkedin"></i>
+          </div>
+          </div>
+  
+          <div class="col">
+            <h3>
+              Quick links
+              <div class="underline"></div>
+            </h3>
+            <ul id="ul1">
+              <li><a href="../Student_2/tiles2.html">Home</a></li>
+          <li><a href="../Student_2/table.html">Table</a></li>
+          <li><a href="../Student_1/volunteer.html">Volunteers</a></li>
+          <li><a href="../Student_4/profile.html">User profile</a></li>
+          <li><a href="../Student_4/sitemap.html">Site map</a></li>
+          <li><a href="../Student_3/content3.html">Content</a></li>
+          <li><a href="../Student_3/Team.html">Our team</a></li>
+          <li><a href="../Student_3/feedback.html">FeedBack</a></li>
+            </ul>
+          </div>
+  
+          <div class="col">
+            <h3>
+              Contact us
+              <div class="underline"></div>
+            </h3>
+            <div>
+            <p>10 | Trelawney Place<br>Colombo 04<br>Sri Lanka</p>
+            <p class="emailid">info@iit.ac.lk</p>
+            <p>+94 76 676 0760</p>
+          </div>
+          </div>
+          <div class="col">
+            <h3>
+              Team members
+              <div class="underline"></div>
+            </h3>
+            <div>
+            <p>Delakshan Sritharan</p>
+            <p>Kithsara Medawewa</p>
+            <p>Sunera Jayasankha</p>
+            <p>Nusry Rahman</p>
+          </div>  
+          </div>
+        </div>
+        <hr >
+        <p class="copyright">© 2025 Edu Pluse. All Rights Reserved.</p>
+      </footer>
+  
+      <script src="js.script.js"></script>
+    </body>
+  </html>
+  

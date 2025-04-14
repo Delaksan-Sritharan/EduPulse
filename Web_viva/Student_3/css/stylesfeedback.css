@@ -1,0 +1,241 @@
+body {
+    font-family: 'montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #021732;
+    background-image: url('/Student_3/Images/feedback.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: grow 100s infinite linear;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes grow {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 150%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+
+
+
+.feedback-container {
+    margin: 0 auto;
+    padding: 60px;
+    max-width: 800px;
+    background-color:  #021732;
+    border-radius: 8px;
+}
+
+h1, legend, label {
+    color: #ffffff;
+}
+
+fieldset {
+    border: 2px solid #021732;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* Checkbox Group Styling */
+.checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.checkbox div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid none;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+button[type="button"], button[type="submit"] {
+    background-color: #1e88e5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="button"]:hover, button[type="submit"]:hover {
+    background-color: #1565c0;
+}
+
+#rating button {
+    background: #ffffff;
+    border: none;
+    font-size: 2em;
+    font-color: #000000;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#rating button:hover {
+    opacity: 0.8;
+}
+
+#counter {
+    font-size: 0.9em;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+footer a {
+    color: #1e88e5;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+input:invalid, textarea:invalid {
+    border-color: rgb(255, 0, 0);
+}
+
+input:invalid:focus, textarea:invalid:focus {
+    outline: none;
+    border-color: red;
+}
+
+input:valid, textarea:valid {
+    border-color: green;
+}
+
+input:required:invalid, textarea:required:invalid {
+    border-color: rgb(212, 255, 0);
+}
+
+#submit {
+    background-color: #170daa;
+}
+
+input[type="file"],
+input[type="datetime-local"]
+
+input[type="file"] {
+    cursor: pointer;
+}
+
+input[type="file"]:hover,
+input[type="datetime-local"]:hover {
+    border-color: #888;
+}
+
+input[type="file"]:focus,
+input[type="datetime-local"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .team-container {
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+
+    .team-member {
+        width: 220px;
+    }
+
+    .thumbnail {
+        height: 180px;
+    }
+
+    .details h2 {
+        font-size: 20px;
+    }
+
+    .details p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 80%;
+    }
+
+    .thumbnail {
+        height: 150px;
+    }
+
+    .details h2 {
+        font-size: 18px;
+    }
+
+    .details p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .team-container {
+        padding: 10px;
+    }
+
+    .team-member {
+        width: 90%;
+    }
+
+    .thumbnail {
+        height: 120px;
+    }
+
+    .details h2 {
+        font-size: 16px;
+    }
+
+    .details p {
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}

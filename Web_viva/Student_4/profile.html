@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <img class="logo" src="images/logo.png" alt="Learn UN Logo" />
+      <nav>
+        <ul class="nav__links">
+          <li><a href="../Student_2/tiles2.html">Home</a></li>
+          <li><a href="../Student_2/table.html">Table</a></li>
+          <li><a href="../Student_1/volunteer.html">Volunteers</a></li>
+          <li><a href="../Student_4/profile.html">User profile</a></li>
+          <li><a href="../Student_4/sitemap.html">Site map</a></li>
+          <li><a href="../Student_4/content_ST4.html">Content</a></li>
+          <li><a href="../Student_3/Team.html">Our team</a></li>
+          <li><a href="../Student_3/feedback.html">FeedBack</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="profile-main container py-5">
+      <div class="row g-4 mb-4">
+        <div class="col-md-4">
+          <div class="profile-card p-4 text-center">
+            <img
+              src="images/profile.avif"
+              alt="User Avatar"
+              class="avatar-image img-fluid rounded-circle"
+            />
+            <h1 class="mt-3">Nusry Rahman</h1>
+            <p class="role">UNSDG Student Ambassador</p>
+            <div class="social-icons mt-3">
+              <a href="https://facebook.com" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="info-card p-4">
+              <h2><i class="bi bi-heart-fill"></i> Interests</h2>
+              <ul style="list-style-type: none; padding-left: 0">
+                <li>
+                  <i class="bi bi-tree-fill" aria-hidden="true"></i>
+                  <span class="sr-only">Content: Planting Trees</span>
+                  Planting Trees
+                </li>
+                <li>
+                  <i class="bi bi-water" aria-hidden="true"></i>
+                  <span class="sr-only">Content: Cleaning Coasts</span>
+                  Cleaning Coasts
+                </li>
+                <li>
+                  <i class="bi bi-sun-fill" aria-hidden="true"></i>
+                  <span class="sr-only">Content: Solar Energy</span>
+                  Solar Energy
+                </li>
+                <li>
+                  <i class="bi bi-recycle" aria-hidden="true"></i>
+                  <span class="sr-only">Content: Recycling</span> Recycling
+                </li>
+                <li>
+                  <i class="bi bi-bicycle" aria-hidden="true"></i>
+                  <span class="sr-only">Content: Cycling</span> Cycling
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div class="info-card p-4">
+            <h2><i class="bi bi-person-fill"></i> Introduction 😊</h2>
+            <p>
+              Passionate about sustainable development and youth empowerment
+              through education. With over 5 years of experience in project
+              management and public speaking, I have led numerous initiatives
+              aimed at promoting sustainable practices and engaging youth in
+              meaningful activities.
+            </p>
+
+            <h3><i class="bi bi-gear-fill"></i> Skills 🛠️</h3>
+            <button
+              class="btn btn-outline-info mb-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#skills"
+              aria-expanded="false"
+              aria-controls="skills"
+            >
+              Toggle Skills
+            </button>
+            <div class="collapse" id="skills">
+              <ul>
+                <li>
+                  Project Management 📊
+                  <div class="skill-bar-container">
+                    <div class="skill-bar" style="width: 80%">80%</div>
+                  </div>
+                </li>
+                <li>
+                  Public Speaking 🎤
+                  <div class="skill-bar-container">
+                    <div class="skill-bar" style="width: 90%">90%</div>
+                  </div>
+                </li>
+                <li>
+                  Community Engagement 🌍
+                  <div class="skill-bar-container">
+                    <div class="skill-bar" style="width: 85%">85%</div>
+                  </div>
+                </li>
+                <li>
+                  Leadership 👥
+                  <div class="skill-bar-container">
+                    <div class="skill-bar" style="width: 75%">75%</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <h3><i class="bi bi-lightbulb-fill"></i> Goals 🎯</h3>
+            <button
+              class="btn btn-outline-info mb-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#goals"
+              aria-expanded="false"
+              aria-controls="goals"
+            >
+              Toggle Goals
+            </button>
+            <div class="collapse" id="goals">
+              <ul>
+                <li>Promote UN sustainable goals in education 📚.</li>
+                <li>Encourage youth activism ✊.</li>
+                <li>Expand community outreach programs 🌐.</li>
+                <li>Develop educational resources for sustainability 📖.</li>
+              </ul>
+            </div>
+
+            <h3><i class="bi bi-award-fill"></i> Achievements 🏆</h3>
+            <button
+              class="btn btn-outline-info mb-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#achievements"
+              aria-expanded="false"
+              aria-controls="achievements"
+            >
+              Toggle Achievements
+            </button>
+            <div class="collapse" id="achievements">
+              <ul>
+                <li>UNSDG Student Ambassador of the Year 2023 🏅</li>
+                <li>
+                  Led a successful tree planting campaign with over 1,000 trees
+                  planted 🌳.
+                </li>
+                <li>
+                  Organized and hosted a youth summit on sustainable development
+                  🗣️.
+                </li>
+              </ul>
+            </div>
+
+            <h3><i class="bi bi-people-fill"></i> Contact Information 📞</h3>
+            <p>Email: nusry.rahman@example.com 📧</p>
+            <p>Phone: +94 76 676 0760 📱</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-4">
+        <div class="col-md-6">
+          <div class="info-card p-4">
+            <h2><i class="bi bi-briefcase-fill"></i> Skills & Experience</h2>
+            <ul style="list-style-type: none; padding-left: 0">
+              <li><i class="bi bi-mic-fill"></i> Public Speaking</li>
+              <li><i class="bi bi-people-fill"></i> Community Engagement</li>
+              <li><i class="bi bi-kanban-fill"></i> Project Management</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="info-card p-4">
+            <h2><i class="bi bi-flag-fill"></i> Goals & Frustrations</h2>
+            <ul style="list-style-type: none; padding-left: 0">
+              <li>
+                <i class="bi bi-check-circle-fill"></i> Goal: Increase youth
+                engagement in sustainability
+              </li>
+              <li>
+                <i class="bi bi-exclamation-circle-fill"></i> Frustration: Lack
+                of resources for students
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-4">
+        <div class="col-md-6">
+          <div class="info-card p-4">
+            <h2><i class="bi bi-hand-thumbs-up-fill"></i> Volunteering</h2>
+            <ul style="list-style-type: none; padding-left: 0">
+              <li>
+                <i class="bi bi-tree-fill"></i> Community Tree Planting Program
+              </li>
+              <li><i class="bi bi-trash-fill"></i> Beach Cleanup Initiative</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="info-card p-4">
+            <h2><i class="bi bi-globe"></i> UN Goals I Support</h2>
+            <ul style="list-style-type: none; padding-left: 0">
+              <li>
+                <i class="bi bi-book" aria-hidden="true"></i>
+                <span class="sr-only">Content: Quality Education</span> Quality
+                Education
+              </li>
+              <li>
+                <i class="bi bi-heart" aria-hidden="true"></i>
+                <span class="sr-only">Content: Good Health and Well-being</span>
+                Good Health and Well-being
+              </li>
+              <li>
+                <i class="bi bi-droplet" aria-hidden="true"></i>
+                <span class="sr-only">Content: Clean Water and Sanitation</span>
+                Clean Water and Sanitation
+              </li>
+              <li>
+                <i class="bi bi-sun" aria-hidden="true"></i>
+                <span class="sr-only"
+                  >Content: Affordable and Clean Energy</span
+                >
+                Affordable and Clean Energy
+              </li>
+              <li>
+                <i class="bi bi-tree" aria-hidden="true"></i>
+                <span class="sr-only">Content: Climate Action</span> Climate
+                Action
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4 mb-4">
+        <div class="info-card p-4">
+          <h2>Availability</h2>
+          <table class="table table-bordered">
+            <tr>
+              <th>Day</th>
+              <th>Available Time</th>
+            </tr>
+            <tr>
+              <td>Monday</td>
+              <td>2 PM - 5 PM</td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>10 AM - 3 PM</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>1 PM - 4 PM</td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>9 AM - 12 PM</td>
+            </tr>
+            <tr>
+              <td>Sunday</td>
+              <td>3 PM - 6 PM</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="info-card p-4">
+            <h2>Contact Me</h2>
+            <div class="alert alert-success d-none" id="successAlert">
+              Message sent successfully! We'll respond shortly.
+            </div>
+            <div class="alert alert-danger d-none" id="errorAlert">
+              Please fill out all required fields correctly.
+            </div>
+
+            <form id="contactForm" novalidate>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required />
+                <div class="invalid-feedback">Please enter your name</div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required />
+                <div class="invalid-feedback">
+                  Please enter a valid email address
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" class="form-control" id="subject" required />
+                <div class="invalid-feedback">Please enter a subject</div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="3"
+                  required
+                ></textarea>
+                <div class="invalid-feedback">Please enter your message</div>
+              </div>
+              <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="row">
+        <div class="col">
+          <img src="images/logo.svg" class="logo1" alt="Learn UN Logo" />
+          <p>Quality Education for everyone</p>
+          <p>
+            Empowering communities through accessible learning resources
+            worldwide.
+          </p>
+        </div>
+
+        <div class="col">
+          <h3>
+            Quick links
+            <div class="underline"></div>
+          </h3>
+          <ul id="ul1">
+            <li><a href="../Student_2/tiles2.html">Home</a></li>
+            <li><a href="../Student_2/table.html">Table</a></li>
+            <li><a href="../Student_1/volunteer.html">Volunteers</a></li>
+            <li><a href="../Student_4/profile.html">User profile</a></li>
+            <li><a href="../Student_4/sitemap.html">Site map</a></li>
+            <li><a href="../Student_4/content_ST4.html">Content</a></li>
+            <li><a href="../Student_3/Team.html">Our team</a></li>
+            <li><a href="../Student_3/feedback.html">FeedBack</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h3>
+            Contact us
+            <div class="underline"></div>
+          </h3>
+          <p>10 | Trelawney Place</p>
+          <p>Colombo 04</p>
+          <p>Sri Lanka</p>
+          <p class="emailid">info@iit.ac.lk</p>
+          <p>+94 76 676 0760</p>
+        </div>
+        <div class="col">
+          <h3>
+            Follow us
+            <div class="underline"></div>
+          </h3>
+          <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright">© 2025 Learn UN. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/profile.js"></script>
+  </body>
+</html>

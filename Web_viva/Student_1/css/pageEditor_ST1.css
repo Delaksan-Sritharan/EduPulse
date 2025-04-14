@@ -1,0 +1,375 @@
+
+
+
+
+/* rest of the css*/
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f5f5f5;
+    padding-top: 40px;
+  }
+  section p, section li, section h2, section h3 {
+    color: #000;
+}
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  header {
+    background-color: #3a3a3a;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  section {
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    color: #2c5777;
+    border-bottom: 2px solid #2c5777;
+    padding-bottom: 5px;
+  }
+
+  h3 {
+    color: #2c5777;
+  }
+
+  ul {
+    list-style-type: square;
+  }
+
+  .content-overview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .info-box {
+    background-color: #f9f9f9;
+    border-left: 4px solid #2c5777;
+    padding: 15px;
+    margin-bottom: 20px;
+    flex: 1 1 300px;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .highlighted {
+    background-color: #ffffcc;
+    padding: 2px 4px;
+  }
+
+  .links a {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 8px 15px;
+    background-color: #2c5777;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+
+  .links a:hover {
+    background-color: #1a3c55;
+  }
+
+  .challenges {
+    background-color: #f0f7ff;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .references {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 4px solid #333;
+  }
+
+  .references a {
+    color: #2c5777;
+    word-break: break-all;
+  }
+
+  .page-section {
+    margin-bottom: 60px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .page-title {
+    background-color: #2c5777;
+    color: white;
+    padding: 10px 20px;
+    margin: -25px -25px 20px -25px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  code {
+    background-color: #f5f5f5;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: monospace;
+  }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2c5777;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .back-to-top:hover {
+    background-color: #1a3c55;
+  }
+
+  .table-of-contents {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+  }
+
+  .table-of-contents ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .table-of-contents a {
+    text-decoration: none;
+    color: #2c5777;
+  }
+
+  .table-of-contents a:hover {
+    text-decoration: underline;
+  }
+
+  .info-box img{
+    width: 270px;
+    height: auto;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding : 0px;
+
+}
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 30px 10%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    justify-content: flex-end;
+    position: fixed;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #065877, #021732);
+    z-index: var(--z-fixed);
+    padding-top: 0px; /* Further increased to ensure content is not blocked */
+
+
+
+
+    padding-bottom: 00px;
+
+}
+ /* Ensure any line under the nav bar is removed */
+ .header {
+    border-bottom: none !important;
+  }
+  nav {
+    border-bottom: none !important;
+  }
+  .nav__links {
+    border-bottom: none !important;
+  }
+.logo {
+    cursor: pointer;
+    width: 55px;
+    height: 50px;
+    margin-right: auto;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #1fb39f;
+}
+
+footer {
+    width: 100%;
+    position: bottom;
+    bottom: 0;
+    background: linear-gradient(to right, #065877, #021732);
+    color: #fff;
+    padding: 50px 0 30px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    font-size: 13px;
+    line-height: 20px;
+    
+}
+.row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+   
+}
+
+.col{
+    flex-basis:25%;
+    padding: 0px;
+    font-family: "Montserrat", sans-serif;
+    
+}
+
+.col:nth-child(2), .col:nth-child(3) {
+    flex-basis: 15%;
+}
+
+.logo1 {
+    width: 100px;
+    margin-bottom: 80px;
+}
+
+.col h3 {
+   
+    margin-bottom: 40px;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+}
+.col p{
+    align-items: center;
+    justify-content: center;
+    justify-items: center ;
+}
+
+.emailid {
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px ;
+    font-family: "Montserrat", sans-serif;
+}
+
+#ul1 li {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+#ul1 li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.col h2 {
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 500 !important;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.a1 {
+    color: #fff;
+}
+
+.social-icons .fa-brands{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #065877;
+    background-color: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.underline {
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+}

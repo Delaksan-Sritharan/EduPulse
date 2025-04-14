@@ -1,0 +1,419 @@
+/* profile.css */
+/* Custom styles */
+
+
+.profile-main {
+    margin-top: 100px;
+    padding-top: 300px; 
+    padding-bottom: 100px;
+    color: #fff;
+}
+
+
+.profile-card {
+    background: linear-gradient(135deg, #065877 0%, #021732 100%);
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+}
+
+.avatar-image {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #1fb39f;
+    transition: all 0.3s ease;
+}
+
+.avatar-image:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+
+
+/* profile.css */
+/* Enhanced Professional Styles */
+
+.info-card {
+    background: #fff;
+    border-radius: 15px;
+    border: 1px solid #eaeff5;
+    box-shadow: 0 4px 24px rgba(2, 23, 50, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 2rem;
+    color: #021732;
+    font-family: "Montserrat", sans-serif;
+}
+
+.info-card:hover {
+    box-shadow: 0 8px 32px rgba(2, 23, 50, 0.16);
+    border-color: #065877;
+}
+
+.info-card h2 {
+    color: #065877;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.info-card h3 {
+    color: #1fb39f;
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin: 1.5rem 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-card p {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+}
+
+.info-card ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.info-card ul::before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+}
+
+
+.info-card li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+.info-card li i {
+    color: #1fb39f;
+    font-size: 1.2rem;
+    margin-right: 16px;
+}
+
+.info-card li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #1fb39f;
+    font-weight: bold;
+}
+
+.btn-outline-info {
+    border: 2px solid #065877;
+    color: #065877;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 0.5rem 1.25rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-outline-info:hover {
+    background: #065877;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(6, 88, 119, 0.15);
+}
+
+.btn-outline-info i {
+    color: inherit;
+    font-size: 1.1em;
+}
+
+.collapse {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.collapse.show {
+    margin-top: 0.5rem;
+}
+
+/* Contact Section Enhancement */
+.info-card h3:last-of-type {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eaeff5;
+}
+
+.info-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Improved Responsive Design */
+@media (max-width: 768px) {
+    .info-card {
+        padding: 1.5rem;
+    }
+
+    .info-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .info-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .btn-outline-info {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Animation Tweaks */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.info-card {
+    animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.skill-bar-container {
+    height: 25px;
+    background-color: #e9ecef;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.skill-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #1fb39f 0%, #065877 100%);
+    border-radius: 12px;
+    transition: width 1.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.interest-icon {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.interest-icon:hover {
+    background-color: #e3f2fd;
+    transform: scale(1.1);
+}
+
+.interest-icon i {
+    font-size: 2.5rem;
+    color: #065877;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.interest-icon:hover i {
+    color: #1fb39f;
+}
+
+.calendar-table td {
+    text-align: center;
+    padding: 0.75rem;
+}
+
+.available {
+    color: #28a745;
+}
+
+.unavailable {
+    color: #dc3545;
+}
+
+.btn-primary {
+    background-color: #065877;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1fb39f;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-card { animation: fadeIn 0.8s ease; }
+.info-card { animation: fadeIn 0.8s 0.2s ease both; }
+.calendar-table { animation: fadeIn 0.8s 0.4s ease both; }
+.contact-form { animation: fadeIn 0.8s 0.6s ease both; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .avatar-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .interest-icon i {
+        font-size: 2rem;
+    }
+}
+
+/* Add this to your existing profile.css */
+
+/* Availability Table Styling */
+.info-card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.info-card table th {
+    background-color: #065877;
+    color: #fff;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 2px solid #1fb39f;
+}
+
+.info-card table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eaeff5;
+    color: #4a5568;
+    position: relative;
+}
+
+.info-card table tr:last-child td {
+    border-bottom: none;
+}
+
+.info-card table tr:hover td {
+    background-color: #f8fafc;
+}
+
+/* Availability Status Indicator */
+.info-card table td:last-child::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #28a745;
+    margin-right: 0.75rem;
+    vertical-align: middle;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .info-card table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .info-card table th,
+    .info-card table td {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Status Animation */
+@keyframes pulse {
+    0% { transform: scale(0.95); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(0.95); }
+}
+
+.info-card table td:last-child::before {
+    animation: pulse 2s infinite;
+}
+
+/* Current Day Highlight */
+.info-card table tr:nth-child(2) { /* Monday */
+    background-color: #f8fafc;
+    font-weight: 500;
+}
+
+.info-card table tr:nth-child(2) td {
+    color: #065877;
+}
+
+
+/* Add to your existing CSS */
+.social-icons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-icons .btn {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icons .btn-outline-info {
+    border: 2px solid #065877;
+    color: #065877;
+}
+
+.social-icons .btn-outline-info:hover {
+    background: #065877;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.social-icons i {
+    font-size: 1.25rem;
+    vertical-align: middle;
+}
+
+/* Mobile optimization */
+@media (max-width: 576px) {
+    .social-icons {
+        gap: 0.5rem;
+    }
+
+    .social-icons .btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .social-icons i {
+        font-size: 1.1rem;
+    }
+}

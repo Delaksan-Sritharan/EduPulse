@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Edu Pulse - Validation</title>
+
+    <!-- Link to your CSS files -->
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="stylesheet" href="table.css" />
+
+    <!-- FontAwesome for icons -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      /* Additional styles for the validation form */
+
+      .validation-container {
+        max-width: 800px;
+
+        margin: 20px auto;
+
+        padding: 30px;
+
+        background-color: #263238;
+
+        border-radius: 10px;
+
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+
+        margin-bottom: 8px;
+
+        font-weight: bold;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+
+        padding: 12px;
+
+        border: 1px solid #455a64;
+
+        border-radius: 5px;
+
+        background-color: #37474f;
+
+        color: white;
+
+        font-size: 16px;
+      }
+
+      .form-group textarea {
+        height: 120px;
+
+        resize: vertical;
+      }
+
+      .error-message {
+        color: #ff5252;
+
+        font-size: 14px;
+
+        margin-top: 5px;
+
+        display: none;
+      }
+
+      .submit-btn {
+        background: linear-gradient(to right, #065877, #021732);
+
+        color: white;
+
+        border: none;
+
+        padding: 12px 30px;
+
+        border-radius: 5px;
+
+        cursor: pointer;
+
+        font-size: 16px;
+
+        font-weight: bold;
+
+        transition: all 0.3s ease;
+      }
+
+      .submit-btn:hover {
+        background: linear-gradient(to right, #1fb39f, #065877);
+      }
+
+      .form-success {
+        background-color: rgba(76, 175, 80, 0.2);
+
+        color: #4caf50;
+
+        padding: 15px;
+
+        border-radius: 5px;
+
+        margin-bottom: 20px;
+
+        display: none;
+      }
+
+      /* Two-column layout for larger screens */
+
+      @media (min-width: 768px) {
+        .form-row {
+          display: flex;
+
+          gap: 20px;
+        }
+
+        .form-row .form-group {
+          flex: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <img class="logo" src="images/logo.png" alt="Edu Pulse Logo" />
+
+      <nav>
+        <ul class="nav__links">
+          <li><a href="#">Home</a></li>
+
+          <li><a href="#">Table</a></li>
+
+          <li><a href="#">Volunteers</a></li>
+
+          <li><a href="#">User profile</a></li>
+
+          <li><a href="#">Site map</a></li>
+
+          <li><a href="#">Content</a></li>
+
+          <li><a href="#">Our team</a></li>
+
+          <li><a href="#">FeedBack</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <header>
+        <h1>Account Validation</h1>
+      </header>
+
+      <div class="validation-container">
+        <div id="form-success" class="form-success">
+          Your information has been successfully validated! Redirecting to your
+          dashboard...
+        </div>
+
+        <form id="validation-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name*</label>
+
+              <input type="text" id="first-name" required />
+
+              <span class="error-message" id="first-name-error"
+                >Please enter your first name</span
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="last-name">Last Name*</label>
+
+              <input type="text" id="last-name" required />
+
+              <span class="error-message" id="last-name-error"
+                >Please enter your last name</span
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address*</label>
+
+            <input type="email" id="email" required />
+
+            <span class="error-message" id="email-error"
+              >Please enter a valid email address</span
+            >
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="password">Password*</label>
+
+              <input type="password" id="password" required />
+
+              <span class="error-message" id="password-error"
+                >Password must be at least 8 characters and include at least one
+                number and one special character</span
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="confirm-password">Confirm Password*</label>
+
+              <input type="password" id="confirm-password" required />
+
+              <span class="error-message" id="confirm-password-error"
+                >Passwords do not match</span
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="user-type">User Type*</label>
+
+            <select id="user-type" required>
+              <option value="">Select user type</option>
+
+              <option value="student">Student</option>
+
+              <option value="educator">Educator</option>
+
+              <option value="volunteer">Volunteer</option>
+
+              <option value="admin">Administrator</option>
+            </select>
+
+            <span class="error-message" id="user-type-error"
+              >Please select a user type</span
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="country">Country*</label>
+
+            <select id="country" required>
+              <option value="">Select your country</option>
+
+              <option value="af">Afghanistan</option>
+
+              <option value="lk">Sri Lanka</option>
+
+              <option value="in">India</option>
+
+              <option value="us">United States</option>
+
+              <option value="uk">United Kingdom</option>
+
+              <option value="ca">Canada</option>
+
+              <option value="au">Australia</option>
+
+              <!-- More countries can be added -->
+            </select>
+
+            <span class="error-message" id="country-error"
+              >Please select your country</span
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="bio">Short Bio (Optional)</label>
+
+            <textarea
+              id="bio"
+              placeholder="Tell us a little about yourself..."
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="submit-btn">Validate Account</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="row">
+        <div class="col">
+          <img src="images/logo.png" class="logo1" alt="Edu Pulse Logo" />
+
+          <p>Quality Education for everyone</p>
+
+          <p>
+            Empowering communities through accessible learning resources
+            worldwide.
+          </p>
+
+          <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+
+            <i class="fa-brands fa-Instagram"></i>
+
+            <i class="fa-brands fa-youtube"></i>
+
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+        </div>
+
+        <div class="col">
+          <h3>
+            Quick links
+
+            <div class="underline"></div>
+          </h3>
+
+          <ul id="ul1">
+            <li><a href="../Student_2/tiles2.html">Home</a></li>
+            <li><a href="../Student_2/table.html">Table</a></li>
+            <li><a href="../Student_1/volunteer.html">Volunteers</a></li>
+            <li><a href="../Student_4/profile.html">User profile</a></li>
+            <li><a href="../Student_4/sitemap.html">Site map</a></li>
+            <li><a href="#">Content</a></li>
+            <li><a href="../Student_3/Team.html">Our team</a></li>
+            <li><a href="../Student_3/feedback.html">FeedBack</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h3>
+            Contact us
+
+            <div class="underline"></div>
+          </h3>
+
+          <div>
+            <p>10 | Trelawney Place<br />Colombo 04<br />Sri Lanka</p>
+
+            <p class="emailed">info@iit.ac.lk</p>
+
+            <p>+94 76 676 0760</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <h3>
+            Team members
+
+            <div class="underline"></div>
+          </h3>
+
+          <div>
+            <p>Delakshan Sritharan</p>
+
+            <p>Kithsara Medawewa</p>
+
+            <p>Sunera Jayasankha</p>
+
+            <p>Nusry Rahman</p>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <p class="copyright">© 2025 Edu Pulse. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+
+        const form = document.getElementById('validation-form');
+
+        const firstName = document.getElementById('first-name');
+
+        const lastName = document.getElementById('last-name');
+
+        const email = document.getElementById('email');
+
+        const password = document.getElementById('password');
+
+        const confirmPassword = document.getElementById('confirm-password');
+
+        const userType = document.getElementById('user-type');
+
+        const country = document.getElementById('country');
+
+
+
+        // Show error message
+
+        function showError(inputElement, message) {
+
+          const errorElement = document.getElementById(${inputElement.id}-error);
+
+          errorElement.textContent = message;
+
+          errorElement.style.display = 'block';
+
+          inputElement.style.borderColor = '#FF5252';
+
+        }
+
+
+
+        // Hide error message
+
+        function hideError(inputElement) {
+
+          const errorElement = document.getElementById(${inputElement.id}-error);
+
+          errorElement.style.display = 'none';
+
+          inputElement.style.borderColor = '#455A64';
+
+        }
+
+
+
+        // Validate email format
+
+        function validateEmail(email) {
+
+          const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+          return re.test(String(email).toLowerCase());
+
+        }
+
+
+
+        // Validate password strength
+
+        function validatePassword(password) {
+
+          // At least 8 characters, 1 number, 1 special character
+
+          const re = /^(?=.[0-9])(?=.[!@#$%^&])[a-zA-Z0-9!@#$%^&]{8,}$/;
+
+          return re.test(password);
+
+        }
+
+
+
+        // Event listeners for real-time validation
+
+        firstName.addEventListener('input', function() {
+
+          if (firstName.value.trim() !== '') {
+
+            hideError(firstName);
+
+          }
+
+        });
+
+
+
+        lastName.addEventListener('input', function() {
+
+          if (lastName.value.trim() !== '') {
+
+            hideError(lastName);
+
+          }
+
+        });
+
+
+
+        email.addEventListener('input', function() {
+
+          if (validateEmail(email.value)) {
+
+            hideError(email);
+
+          }
+
+        });
+
+
+
+        password.addEventListener('input', function() {
+
+          if (validatePassword(password.value)) {
+
+            hideError(password);
+
+          }
+
+        });
+
+
+
+        confirmPassword.addEventListener('input', function() {
+
+          if (confirmPassword.value === password.value) {
+
+            hideError(confirmPassword);
+
+          }
+
+        });
+
+
+
+        userType.addEventListener('change', function() {
+
+          if (userType.value !== '') {
+
+            hideError(userType);
+
+          }
+
+        });
+
+
+
+        country.addEventListener('change', function() {
+
+          if (country.value !== '') {
+
+            hideError(country);
+
+          }
+
+        });
+
+
+
+        // Form submission
+
+        form.addEventListener('submit', function(event) {
+
+          event.preventDefault();
+
+          let isValid = true;
+
+
+
+          // First name validation
+
+          if (firstName.value.trim() === '') {
+
+            showError(firstName, 'Please enter your first name');
+
+            isValid = false;
+
+          }
+
+
+
+          // Last name validation
+
+          if (lastName.value.trim() === '') {
+
+            showError(lastName, 'Please enter your last name');
+
+            isValid = false;
+
+          }
+
+
+
+          // Email validation
+
+          if (!validateEmail(email.value)) {
+
+            showError(email, 'Please enter a valid email address');
+
+            isValid = false;
+
+          }
+
+
+
+          // Password validation
+
+          if (!validatePassword(password.value)) {
+
+            showError(password, 'Password must be at least 8 characters and include at least one number and one special character');
+
+            isValid = false;
+
+          }
+
+
+
+          // Confirm password validation
+
+          if (confirmPassword.value !== password.value) {
+
+            showError(confirmPassword, 'Passwords do not match');
+
+            isValid = false;
+
+          }
+
+
+
+          // User type validation
+
+          if (userType.value === '') {
+
+            showError(userType, 'Please select a user type');
+
+            isValid = false;
+
+          }
+
+
+
+          // Country validation
+
+          if (country.value === '') {
+
+            showError(country, 'Please select your country');
+
+            isValid = false;
+
+          }
+
+
+
+          // If the form is valid, show success message
+
+          if (isValid) {
+
+            const successMessage = document.getElementById('form-success');
+
+            successMessage.style.display = 'block';
+
+            form.reset();
+
+
+
+            // Simulate redirect after 3 seconds
+
+            setTimeout(() => {
+
+              alert('Form successfully submitted! In a real application, you would be redirected to your dashboard.');
+
+              successMessage.style.display = 'none';
+
+            }, 3000);
+
+          }
+
+        });
+
+      });
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edu Pulse - Validation</title>
+    <!-- Link to your CSS files -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="table.css" />
+    <!-- FontAwesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* Additional styles for the validation form */
+      .validation-container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 30px;
+        background-color: #263238;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #455a64;
+        border-radius: 5px;
+        background-color: #37474f;
+        color: white;
+        font-size: 16px;
+      }
+
+      .form-group textarea {
+        height: 120px;
+        resize: vertical;
+      }
+
+      .error-message {
+        color: #ff5252;
+        font-size: 14px;
+        margin-top: 5px;
+        display: none;
+      }
+
+      .submit-btn {
+        background: linear-gradient(to right, #065877, #021732);
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+
+      .submit-btn:hover {
+        background: linear-gradient(to right, #1fb39f, #065877);
+      }
+
+      .form-success {
+        background-color: rgba(76, 175, 80, 0.2);
+        color: #4caf50;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        display: none;
+      }
+
+      /* Two-column layout for larger screens */
+      @media (min-width: 768px) {
+        .form-row {
+          display: flex;
+          gap: 20px;
+        }
+
+        .form-row .form-group {
+          flex: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <img class="logo" src="images/logo.png" alt="Edu Pulse Logo" />
+
+      <nav>
+        <ul class="nav__links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Table</a></li>
+          <li><a href="#">Volunteers</a></li>
+          <li><a href="#">User profile</a></li>
+          <li><a href="#">Site map</a></li>
+          <li><a href="#">Content</a></li>
+          <li><a href="#">Our team</a></li>
+          <li><a href="#">FeedBack</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <header>
+        <h1>Account Validation</h1>
+      </header>
+
+      <div class="validation-container">
+        <div id="form-success" class="form-success">
+          Your information has been successfully validated! Redirecting to your
+          dashboard...
+        </div>
+
+        <form id="validation-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name*</label>
+              <input type="text" id="first-name" required />
+              <span class="error-message" id="first-name-error"
+                >Please enter your first name</span
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="last-name">Last Name*</label>
+              <input type="text" id="last-name" required />
+              <span class="error-message" id="last-name-error"
+                >Please enter your last name</span
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address*</label>
+            <input type="email" id="email" required />
+            <span class="error-message" id="email-error"
+              >Please enter a valid email address</span
+            >
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="password">Password*</label>
+              <input type="password" id="password" required />
+              <span class="error-message" id="password-error"
+                >Password must be at least 8 characters and include at least one
+                number and one special character</span
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="confirm-password">Confirm Password*</label>
+              <input type="password" id="confirm-password" required />
+              <span class="error-message" id="confirm-password-error"
+                >Passwords do not match</span
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="user-type">User Type*</label>
+            <select id="user-type" required>
+              <option value="">Select user type</option>
+              <option value="student">Student</option>
+              <option value="educator">Educator</option>
+              <option value="volunteer">Volunteer</option>
+              <option value="admin">Administrator</option>
+            </select>
+            <span class="error-message" id="user-type-error"
+              >Please select a user type</span
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="country">Country*</label>
+            <select id="country" required>
+              <option value="">Select your country</option>
+              <option value="af">Afghanistan</option>
+              <option value="lk">Sri Lanka</option>
+              <option value="in">India</option>
+              <option value="us">United States</option>
+              <option value="uk">United Kingdom</option>
+              <option value="ca">Canada</option>
+              <option value="au">Australia</option>
+              <!-- More countries can be added -->
+            </select>
+            <span class="error-message" id="country-error"
+              >Please select your country</span
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="bio">Short Bio (Optional)</label>
+            <textarea
+              id="bio"
+              placeholder="Tell us a little about yourself..."
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="submit-btn">Validate Account</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="row">
+        <div class="col">
+          <img src="images/logo.png" class="logo1" alt="Edu Pulse Logo" />
+          <p>Quality Education for everyone</p>
+          <p>
+            Empowering communities through accessible learning resources
+            worldwide.
+          </p>
+          <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+        </div>
+
+        <div class="col">
+          <h3>
+            Quick links
+            <div class="underline"></div>
+          </h3>
+          <ul id="ul1">
+            <li><a href="../Student_2/tiles2.html">Home</a></li>
+            <li><a href="../Student_2/table.html">Table</a></li>
+            <li><a href="../Student_1/volunteer.html">Volunteers</a></li>
+            <li><a href="../Student_4/profile.html">User profile</a></li>
+            <li><a href="../Student_4/sitemap.html">Site map</a></li>
+            <li><a href="#">Content</a></li>
+            <li><a href="../Student_3/Team.html">Our team</a></li>
+            <li><a href="../Student_3/feedback.html">FeedBack</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h3>
+            Contact us
+            <div class="underline"></div>
+          </h3>
+          <div>
+            <p>10 | Trelawney Place<br />Colombo 04<br />Sri Lanka</p>
+            <p class="emailid">info@iit.ac.lk</p>
+            <p>+94 76 676 0760</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <h3>
+            Team members
+            <div class="underline"></div>
+          </h3>
+          <div>
+            <p>Delakshan Sritharan</p>
+            <p>Kithsara Medawewa</p>
+            <p>Sunera Jayasankha</p>
+            <p>Nusry Rahman</p>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+      <p class="copyright">© 2025 Edu Pulse. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('validation-form');
+        const firstName = document.getElementById('first-name');
+        const lastName = document.getElementById('last-name');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirm-password');
+        const userType = document.getElementById('user-type');
+        const country = document.getElementById('country');
+
+        // Show error message
+        function showError(inputElement, message) {
+          const errorElement = document.getElementById(${inputElement.id}-error);
+          errorElement.textContent = message;
+          errorElement.style.display = 'block';
+          inputElement.style.borderColor = '#FF5252';
+        }
+
+        // Hide error message
+        function hideError(inputElement) {
+          const errorElement = document.getElementById(${inputElement.id}-error);
+          errorElement.style.display = 'none';
+          inputElement.style.borderColor = '#455A64';
+        }
+
+        // Validate email format
+        function validateEmail(email) {
+          const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return re.test(String(email).toLowerCase());
+        }
+
+        // Validate password strength
+        function validatePassword(password) {
+          // At least 8 characters, 1 number, 1 special character
+          const re = /^(?=.[0-9])(?=.[!@#$%^&])[a-zA-Z0-9!@#$%^&]{8,}$/;
+          return re.test(password);
+        }
+
+        // Event listeners for real-time validation
+        firstName.addEventListener('input', function() {
+          if (firstName.value.trim() !== '') {
+            hideError(firstName);
+          }
+        });
+
+        lastName.addEventListener('input', function() {
+          if (lastName.value.trim() !== '') {
+            hideError(lastName);
+          }
+        });
+
+        email.addEventListener('input', function() {
+          if (validateEmail(email.value)) {
+            hideError(email);
+          }
+        });
+
+        password.addEventListener('input', function() {
+          if (validatePassword(password.value)) {
+            hideError(password);
+          }
+        });
+
+        confirmPassword.addEventListener('input', function() {
+          if (confirmPassword.value === password.value) {
+            hideError(confirmPassword);
+          }
+        });
+
+        userType.addEventListener('change', function() {
+          if (userType.value !== '') {
+            hideError(userType);
+          }
+        });
+
+        country.addEventListener('change', function() {
+          if (country.value !== '') {
+            hideError(country);
+          }
+        });
+
+        // Form submission
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          let isValid = true;
+
+          // First name validation
+          if (firstName.value.trim() === '') {
+            showError(firstName, 'Please enter your first name');
+            isValid = false;
+          }
+
+          // Last name validation
+          if (lastName.value.trim() === '') {
+            showError(lastName, 'Please enter your last name');
+            isValid = false;
+          }
+
+          // Email validation
+          if (!validateEmail(email.value)) {
+            showError(email, 'Please enter a valid email address');
+            isValid = false;
+          }
+
+          // Password validation
+          if (!validatePassword(password.value)) {
+            showError(password, 'Password must be at least 8 characters and include at least one number and one special character');
+            isValid = false;
+          }
+
+          // Confirm password validation
+          if (confirmPassword.value !== password.value) {
+            showError(confirmPassword, 'Passwords do not match');
+            isValid = false;
+          }
+
+          // User type validation
+          if (userType.value === '') {
+            showError(userType, 'Please select a user type');
+            isValid = false;
+          }
+
+          // Country validation
+          if (country.value === '') {
+            showError(country, 'Please select your country');
+            isValid = false;
+          }
+
+          // If the form is valid, show success message
+          if (isValid) {
+            const successMessage = document.getElementById('form-success');
+            successMessage.style.display = 'block';
+            form.reset();
+
+            // Simulate redirect after 3 seconds
+            setTimeout(() => {
+              alert('Form successfully submitted! In a real application, you would be redirected to your dashboard.');
+              successMessage.style.display = 'none';
+            }, 3000);
+          }
+        });
+      });
+    </script>
+  </body>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Edu Pulse - Validation</title>
+      <!-- Link to your CSS files -->
+      <link rel="stylesheet" href="styles.css" />
+      <link rel="stylesheet" href="table.css" />
+      <!-- FontAwesome for icons -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
+      <style>
+        /* Additional styles for the validation form */
+        .validation-container {
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 30px;
+          background-color: #263238;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+          margin-bottom: 20px;
+        }
+
+        .form-group label {
+          display: block;
+          margin-bottom: 8px;
+          font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #455a64;
+          border-radius: 5px;
+          background-color: #37474f;
+          color: white;
+          font-size: 16px;
+        }
+
+        .form-group textarea {
+          height: 120px;
+          resize: vertical;
+        }
+
+        .error-message {
+          color: #ff5252;
+          font-size: 14px;
+          margin-top: 5px;
+          display: none;
+        }
+
+        .submit-btn {
+          background: linear-gradient(to right, #065877, #021732);
+          color: white;
+          border: none;
+          padding: 12px 30px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: bold;
+          transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+          background: linear-gradient(to right, #1fb39f, #065877);
+        }
+
+        .form-success {
+          background-color: rgba(76, 175, 80, 0.2);
+          color: #4caf50;
+          padding: 15px;
+          border-radius: 5px;
+          margin-bottom: 20px;
+          display: none;
+        }
+
+        /* Two-column layout for larger screens */
+        @media (min-width: 768px) {
+          .form-row {
+            display: flex;
+            gap: 20px;
+          }
+
+          .form-row .form-group {
+            flex: 1;
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <header class="header">
+        <img class="logo" src="images/logo.png" alt="Edu Pulse Logo" />
+
+        <nav>
+          <ul class="nav__links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Table</a></li>
+            <li><a href="#">Volunteers</a></li>
+            <li><a href="#">User profile</a></li>
+            <li><a href="#">Site map</a></li>
+            <li><a href="#">Content</a></li>
+            <li><a href="#">Our team</a></li>
+            <li><a href="#">FeedBack</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <header>
+          <h1>Account Validation</h1>
+        </header>
+
+        <div class="validation-container">
+          <div id="form-success" class="form-success">
+            Your information has been successfully validated! Redirecting to
+            your dashboard...
+          </div>
+
+          <form id="validation-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name*</label>
+                <input type="text" id="first-name" required />
+                <span class="error-message" id="first-name-error"
+                  >Please enter your first name</span
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="last-name">Last Name*</label>
+                <input type="text" id="last-name" required />
+                <span class="error-message" id="last-name-error"
+                  >Please enter your last name</span
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address*</label>
+              <input type="email" id="email" required />
+              <span class="error-message" id="email-error"
+                >Please enter a valid email address</span
+              >
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="password">Password*</label>
+                <input type="password" id="password" required />
+                <span class="error-message" id="password-error"
+                  >Password must be at least 8 characters and include at least
+                  one number and one special character</span
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="confirm-password">Confirm Password*</label>
+                <input type="password" id="confirm-password" required />
+                <span class="error-message" id="confirm-password-error"
+                  >Passwords do not match</span
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="user-type">User Type*</label>
+              <select id="user-type" required>
+                <option value="">Select user type</option>
+                <option value="student">Student</option>
+                <option value="educator">Educator</option>
+                <option value="volunteer">Volunteer</option>
+                <option value="admin">Administrator</option>
+              </select>
+              <span class="error-message" id="user-type-error"
+                >Please select a user type</span
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="country">Country*</label>
+              <select id="country" required>
+                <option value="">Select your country</option>
+                <option value="af">Afghanistan</option>
+                <option value="lk">Sri Lanka</option>
+                <option value="in">India</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="ca">Canada</option>
+                <option value="au">Australia</option>
+                <!-- More countries can be added -->
+              </select>
+              <span class="error-message" id="country-error"
+                >Please select your country</span
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="bio">Short Bio (Optional)</label>
+              <textarea
+                id="bio"
+                placeholder="Tell us a little about yourself..."
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="submit-btn">Validate Account</button>
+            </div>
+          </form>
+        </div>
+      </main>
+
+      <footer>
+        <div class="row">
+          <div class="col">
+            <img src="images/logo.png" class="logo1" alt="Edu Pulse Logo" />
+            <p>Quality Education for everyone</p>
+            <p>
+              Empowering communities through accessible learning resources
+              worldwide.
+            </p>
+            <div class="social-icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
+          </div>
+
+          <div class="col">
+            <h3>
+              Quick links
+              <div class="underline"></div>
+            </h3>
+            <ul id="ul1">
+              <li><a href="../Student_2/tiles2.html">Home</a></li>
+              <li><a href="../Student_2/table.html">Table</a></li>
+              <li><a href="../Student_1/volunteer.html">Volunteers</a></li>
+              <li><a href="../Student_4/profile.html">User profile</a></li>
+              <li><a href="../Student_4/sitemap.html">Site map</a></li>
+              <li><a href="#">Content</a></li>
+              <li><a href="../Student_3/Team.html">Our team</a></li>
+              <li><a href="../Student_3/feedback.html">FeedBack</a></li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <h3>
+              Contact us
+              <div class="underline"></div>
+            </h3>
+            <div>
+              <p>10 | Trelawney Place<br />Colombo 04<br />Sri Lanka</p>
+              <p class="emailid">info@iit.ac.lk</p>
+              <p>+94 76 676 0760</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <h3>
+              Team members
+              <div class="underline"></div>
+            </h3>
+            <div>
+              <p>Delakshan Sritharan</p>
+              <p>Kithsara Medawewa</p>
+              <p>Sunera Jayasankha</p>
+              <p>Nusry Rahman</p>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+        <p class="copyright">© 2025 Edu Pulse. All Rights Reserved.</p>
+      </footer>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const form = document.getElementById('validation-form');
+          const firstName = document.getElementById('first-name');
+          const lastName = document.getElementById('last-name');
+          const email = document.getElementById('email');
+          const password = document.getElementById('password');
+          const confirmPassword = document.getElementById('confirm-password');
+          const userType = document.getElementById('user-type');
+          const country = document.getElementById('country');
+
+          // Show error message
+          function showError(inputElement, message) {
+            const errorElement = document.getElementById(${inputElement.id}-error);
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+            inputElement.style.borderColor = '#FF5252';
+          }
+
+          // Hide error message
+          function hideError(inputElement) {
+            const errorElement = document.getElementById(${inputElement.id}-error);
+            errorElement.style.display = 'none';
+            inputElement.style.borderColor = '#455A64';
+          }
+
+          // Validate email format
+          function validateEmail(email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+          }
+
+          // Validate password strength
+          function validatePassword(password) {
+            // At least 8 characters, 1 number, 1 special character
+            const re = /^(?=.[0-9])(?=.[!@#$%^&])[a-zA-Z0-9!@#$%^&]{8,}$/;
+            return re.test(password);
+          }
+
+          // Event listeners for real-time validation
+          firstName.addEventListener('input', function() {
+            if (firstName.value.trim() !== '') {
+              hideError(firstName);
+            }
+          });
+
+          lastName.addEventListener('input', function() {
+            if (lastName.value.trim() !== '') {
+              hideError(lastName);
+            }
+          });
+
+          email.addEventListener('input', function() {
+            if (validateEmail(email.value)) {
+              hideError(email);
+            }
+          });
+
+          password.addEventListener('input', function() {
+            if (validatePassword(password.value)) {
+              hideError(password);
+            }
+          });
+
+          confirmPassword.addEventListener('input', function() {
+            if (confirmPassword.value === password.value) {
+              hideError(confirmPassword);
+            }
+          });
+
+          userType.addEventListener('change', function() {
+            if (userType.value !== '') {
+              hideError(userType);
+            }
+          });
+
+          country.addEventListener('change', function() {
+            if (country.value !== '') {
+              hideError(country);
+            }
+          });
+
+          // Form submission
+          form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            let isValid = true;
+
+            // First name validation
+            if (firstName.value.trim() === '') {
+              showError(firstName, 'Please enter your first name');
+              isValid = false;
+            }
+
+            // Last name validation
+            if (lastName.value.trim() === '') {
+              showError(lastName, 'Please enter your last name');
+              isValid = false;
+            }
+
+            // Email validation
+            if (!validateEmail(email.value)) {
+              showError(email, 'Please enter a valid email address');
+              isValid = false;
+            }
+
+            // Password validation
+            if (!validatePassword(password.value)) {
+              showError(password, 'Password must be at least 8 characters and include at least one number and one special character');
+              isValid = false;
+            }
+
+            // Confirm password validation
+            if (confirmPassword.value !== password.value) {
+              showError(confirmPassword, 'Passwords do not match');
+              isValid = false;
+            }
+
+            // User type validation
+            if (userType.value === '') {
+              showError(userType, 'Please select a user type');
+              isValid = false;
+            }
+
+            // Country validation
+            if (country.value === '') {
+              showError(country, 'Please select your country');
+              isValid = false;
+            }
+
+            // If the form is valid, show success message
+            if (isValid) {
+              const successMessage = document.getElementById('form-success');
+              successMessage.style.display = 'block';
+              form.reset();
+
+              // Simulate redirect after 3 seconds
+              setTimeout(() => {
+                alert('Form successfully submitted! In a real application, you would be redirected to your dashboard.');
+                successMessage.style.display = 'none';
+              }, 3000);
+            }
+          });
+        });
+      </script>
+    </body>
+  </html>
+</html>
